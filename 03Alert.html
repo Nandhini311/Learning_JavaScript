@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Example</title>
+</head>
+<body>
+    <input type="button" onclick="show_alert()" value="Click me to execute JS alert">
+    <input type="button" onclick="getConfirmation()" value="Confirm button">
+    <input type="button" onclick="promptMe()" value="Prompt me please">
+    <script>
+        function show_alert(){
+            return alert("you have clicked the button");
+            document.write('This text was placed here with JavaScript');
+        }
+
+        function getConfirmation(){
+            let decision = confirm("Do you want to continue ?");
+            if(decision == true){
+                return document.write("The user wanted to continue");
+            }
+            else {
+                return document.write("The user wants to quit the applicaiton");
+            }
+        }
+
+        function promptMe(){
+            let number = prompt("How many warthogs do you have?", "enter number of warthogs");
+            if(number == 2){
+                return document.write("You have two warthogs");
+            }
+        }
+    </script>
+</body>
+</html>

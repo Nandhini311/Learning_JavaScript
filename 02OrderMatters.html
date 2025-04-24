@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order matters</title>
+ </head>  
+ <body>
+   <p id="order-matters">We want this text to display</p>
+   <script>
+    let t1 = +new Date(); //+ converts the current time into milliseconds. 
+    console.log('script started at', t1);
+    console.log('element', document.getElementById('order-matters'));
+    while((new Date() < t1 + 5000)){
+        //do nothing 
+    }
+    console.log('scrip has finished running at ', +new Date());
+</script>
+ </body> 
+</html>

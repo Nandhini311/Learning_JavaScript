@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Design Alert</title>
+    <script>
+        function alertMe(){
+            //initially the confirm box is hidden, once we press the click Me button,
+            //it calls this alertMe method
+
+            let confirmBox = document.getElementById("confirm");
+            //we are getting the confirmBox div
+            confirmBox.setAttribute("style", "display: block");
+            //making it visible
+
+            let okayButton = document.getElementsByClassName("yes")[0];
+            //the getElementsByClassName returns only a list, even if it finds only one elements. hence[0] to acces the first value
+            //now we are getting the okay button in it,
+
+            okayButton.onclick = function (){
+                confirmBox.setAttribute("style", "display: none")
+            }
+            //upon clicking the okay button, we want the confirm box to disappear.
+        }
+    </script>
+    <style>
+        #confirm{
+            display: block;
+            background-color: darkblue;
+            position: fixed;
+            border: 2px solid yellow;
+            left: 50%;
+            width: 15em;
+            margin-left: -100px;
+            padding: 6px 8px 8px;
+            text-align: center;
+            display: none;
+        }
+
+        .message{
+            margin-top: 1em;
+            margin-bottom: 1em;
+            color: white;
+        }
+
+        #confirm button{
+            background-color: red;
+            border-radius: 5%;
+            border: 1px solid black;
+            cursor: pointer;
+            width: 25%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+     <div id="confirm">
+        <div class="message">This is a warning message</div>
+         <button class="yes">OK</button>
+     </div>
+     <input type="button" value="Click me" onclick="alertMe()">
+</body>
+</html>
