@@ -34,5 +34,4 @@ console.log(typeof(Person));
 //function -> needs to be a constructor function.
 
 console.log(Person === Person.prototype.constructor)
-
 console.log(Object.getPropertyNames(Person.prototype));
